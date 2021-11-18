@@ -64,3 +64,9 @@ button {
   margin: 28px 0;
   row-gap: 15px;
 }
+
+.timeline {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 20px;
+}
