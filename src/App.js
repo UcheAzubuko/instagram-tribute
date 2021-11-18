@@ -1,22 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Post from "./components/post/Post";
 import "./App.css";
+import { db } from "./firebase/FirebaseInit";
 
 function App() {
-  const [posts, setPosts] = useState([
-    {
-      username: "uchethebobo",
-      caption: "Wow, I'm Amazing!",
-      imageUrl:
-        "https://images.unsplash.com/photo-1637014387463-a446e89abb68?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    },
-    {
-      username: "godtello",
-      caption: "Oh, I'm a God!",
-      imageUrl:
-        "https://images.unsplash.com/photo-1637019838019-5f14d84ee308?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    },
-  ]);
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    db.collection("posts").onSnapshot((snapshot) => {
+      setPosts(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          post: doc.data(),
+        }))
+      );
+    });
+  }, []);
 
   return (
     <div className="app">
@@ -35,8 +34,9 @@ function App() {
       </div>
 
       <div className="timeline">
-        {posts.map((post) => (
+        {posts.map(({ id, post }) => (
           <Post
+            key={id}
             username={post.username}
             caption={post.caption}
             imageUrl={post.imageUrl}
