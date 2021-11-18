@@ -216,6 +216,8 @@ function App() {
         {posts.map(({ id, post }) => (
           <Post
             key={id}
+            postId={id}
+            user={user} // To pass current user to add current user when adding comment
             username={post.username}
             caption={post.caption}
             imageUrl={post.imageUrl}

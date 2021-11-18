@@ -4,13 +4,13 @@ import "firebase/compat/auth";
 import "firebase/compat/storage";
 
 const firebaseApp = fb.initializeApp({
-  apiKey: "AIzaSyBpo1M-1md3-sYmsG8hy_BUcNX8BeLceJE",
-  authDomain: "test-6a28e.firebaseapp.com",
-  projectId: "test-6a28e",
-  storageBucket: "test-6a28e.appspot.com",
-  messagingSenderId: "1033856438695",
-  appId: "1:1033856438695:web:4520ca6153860156dae682",
-  measurementId: "G-B3WRBJHDZ3",
+  apiKey: "AIzaSyChpqvN5Fmp_BgzANBqU_MvcSGTJWmGyB4",
+  authDomain: "instagram-tribute.firebaseapp.com",
+  projectId: "instagram-tribute",
+  storageBucket: "instagram-tribute.appspot.com",
+  messagingSenderId: "871713787286",
+  appId: "1:871713787286:web:25f60316c0c79422cde1b7",
+  measurementId: "G-WSGFNDVN65"
 });
 
 const db = firebaseApp.firestore();
