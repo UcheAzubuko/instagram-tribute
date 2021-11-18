@@ -2,7 +2,7 @@
 
 This project is a clone of the [Instagram](https://instagram.com) web app, built using ReactJS and connected to a Firebase backend to improve its functionality - from signing up to uploading posts, and adding comments to posts.
 
-Visit a [live instance]() to check it out.
+Visit a [live instance](https://instagram-tribute.web.app/) to check it out. Only users who sign up can make posts and add comments
 
 ## Available Scripts
 
