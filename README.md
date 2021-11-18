@@ -1,6 +1,6 @@
 # Instagram Tribute
 
-This project is a clone of the [https://instagram.com](https://instagram.com), built using ReactJS and connected to a Firebase backend to improve its functionality - from signing up to uploading posts, and adding comments to posts.
+This project is a clone of the [Instagram](https://instagram.com) web app, built using ReactJS and connected to a Firebase backend to improve its functionality - from signing up to uploading posts, and adding comments to posts.
 
 Visit a [live instance]() to check it out.
 
