@@ -4,6 +4,7 @@ import "./App.css";
 import { db, auth } from "./firebase/FirebaseInit";
 import { makeStyles } from "@material-ui/core";
 import Modal from "@material-ui/core/Modal";
+import ImageUpload from "./components/imageUpload/ImageUpload";
 
 function getModalStyle() {
   const top = 50;
@@ -210,11 +211,11 @@ function App() {
       </div>
 
       <div className="timeline">
+        {user && <ImageUpload user={user} />}
+
         {posts.map(({ id, post }) => (
           <Post
             key={id}
-            postId={id}
-            user={user} // To pass current user to add current user when adding comment
             username={post.username}
             caption={post.caption}
             imageUrl={post.imageUrl}
