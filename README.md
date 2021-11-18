@@ -6,7 +6,7 @@ Visit a [live instance]() to check it out.
 
 ## Available Scripts
 
-After cloning the repo, you can run the following in the app directory:
+After forking or cloning the repo, you can run the following in the app directory:
 
 ### `yarn`
 
